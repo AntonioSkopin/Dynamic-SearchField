@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: #e0eafc;
     background: -webkit-linear-gradient(to right, #e0eafc, #cfdef3);
@@ -12,6 +17,10 @@ body {
     margin-top: 3rem;
 }
 
+form {
+    margin: 2rem;
+}
+
 input {
     border-radius: 2rem;
     color: #000;
@@ -21,4 +30,28 @@ input {
 
 input:focus {
     outline: none;
+}
+
+.namen {
+    margin-top: 1rem;
+}
+
+footer {
+    display: flex;
+    background-color: #fff;
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    padding: 1rem 0;
+    -webkit-box-shadow: 0px -14px 21px -16px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px -14px 21px -16px rgba(0,0,0,0.26);
+    box-shadow: 0px -14px 21px -16px rgba(0,0,0,0.26);
+}
+
+footer > p {
+    padding-left: 1rem;
+}
+
+footer > a {
+    padding-left: 0.5rem;
 }

@@ -8,7 +8,7 @@
     // Get the q parameter from URL
     $q = $_REQUEST["q"];
 
-    $hint = "<br>";
+    $hint = "";
 
     // Lookup all hints from array if $q is different from ""
     if ($q !== "") {
@@ -18,13 +18,13 @@
             if (stristr($q, substr($name["naam"], 0, $len))) {
                 // Checks if the first occurence of q is the same as the first letter of the current element
                 if ($hint === "") {
-                    $hint = $name["naam"];
+                    $hint .= "- " . $name["naam"];
                 } else {
-                    $hint .= "<br>" . "- " . $name["naam"] . "";
+                    $hint .= "<br>- " . $name["naam"];
                 }
             }
         }
     }
 
     // Output "Geen naam gevonden" if no hint was found or output correct values
-    echo $hint === "<br>" ? "<br>Geen naam gevonden" : $hint;
+    echo $hint === "" ? "<br>Geen naam gevonden" : $hint;

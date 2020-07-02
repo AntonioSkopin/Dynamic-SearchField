@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Field</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        
-    </style>
     <script>
         const showHint = str => {
             if (str.length == 0) { // Check if input string is empty
@@ -29,13 +26,22 @@
     </script>
 </head>
 <body>
+
     <div class="container">
         <h1>Zoek een naam op uit de database</h1>
         <form action="" autocomplete="off">
             <label for="naam">Naam:</label>
             <input type="text" id="naam" name="naam" onkeyup="showHint(this.value)">
         </form>
-        <p>Suggesties: <span id="naamHint"></span></p>
+        <h3>Suggesties:</h3>
+        <div class="namen">
+            <h2 id="naamHint"></h2>
+        </div>
     </div>
+    
+    <footer>
+        <p>Antonio Skopin &copy; | </p>
+        <a href="">Login</a>
+    </footer>
 </body>
 </html>
