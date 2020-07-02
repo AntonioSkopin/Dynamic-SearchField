@@ -16,6 +16,7 @@
         $len = strlen($q); // Get length of string q
         foreach ($data as &$name) {
             if (stristr($q, substr($name["naam"], 0, $len))) {
+                // Checks if the first occurence of q is the same as the first letter of the current element
                 if ($hint === "") {
                     $hint = $name["naam"];
                 } else {
@@ -25,5 +26,5 @@
         }
     }
 
-    // Output "no suggestion" if no hint was found or output correct values
+    // Output "Geen naam gevonden" if no hint was found or output correct values
     echo $hint === "<br>" ? "<br>Geen naam gevonden" : $hint;
