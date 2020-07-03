@@ -1,7 +1,7 @@
 <?php
-    include "./database-connectie.php";
+    include "../Database/database-connection.php";
 
-    $query = $connectie->prepare("SELECT * FROM persoon");
+    $query = $connection->prepare("SELECT * FROM persoon");
     $query->execute();
     $data = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -25,6 +25,6 @@
             }
         }
     }
-
+    
     // Output "Geen naam gevonden" if no hint was found or output correct values
     echo $hint === "" ? "<br>Geen naam gevonden" : $hint;

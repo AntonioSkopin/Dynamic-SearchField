@@ -16,7 +16,9 @@
                     if (this.readyState == 4 && this.status == 200) {
                         // Checks if request is finished and response is ready
                         // Checks if status is OK
-                        document.getElementById("naamHint").innerHTML = this.responseText; // Sets suggestions to response data
+
+                        // Sets suggestions to response data
+                        document.getElementById("naamHint").innerHTML = this.responseText;
                     }
                 };
                 xmlhttp.open("GET", "gethint.php?q=" + str, true);
@@ -26,7 +28,7 @@
     </script>
 </head>
 <body>
-
+    
     <div class="container">
         <h1>Zoek een naam op uit de database</h1>
         <form action="" autocomplete="off">
@@ -41,7 +43,7 @@
     
     <footer>
         <p>Antonio Skopin &copy; | </p>
-        <a href="">Login</a>
+        <a href="../Login/loginpage.php">Login</a>
     </footer>
 </body>
 </html>
